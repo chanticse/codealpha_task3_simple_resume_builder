@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Resume Builder</h1>
+  <form id="resumeForm">
+    <h2>Personal Information</h2>
+    <input type="text" placeholder="Full Name" id="fullName" required>
+    <input type="email" placeholder="Email" id="email" required>
+    <input type="tel" placeholder="Phone Number" id="phoneNumber" required>
+
+    <h2>Education</h2>
+    <input type="text" placeholder="University/College Name" id="eduName" required>
+    <input type="text" placeholder="Degree" id="degree" required>
+    <input type="text" placeholder="Graduation Year" id="graduationYear" required>
+
+    <h2>Work Experience</h2>
+    <input type="text" placeholder="Company Name" id="companyName" required>
+    <input type="text" placeholder="Job Title" id="jobTitle" required>
+    <textarea placeholder="Job Description" id="jobDescription" required></textarea>
+
+    <h2>Skills</h2>
+    <textarea placeholder="Skills (e.g., Programming, Communication, etc.)" id="skills" required></textarea>
+
+    <button type="button" onclick="generateResume()">Generate Resume</button>
+  </form>
+
+  <div id="resumeOutput" class="hidden">
+    <h2>Resume Output</h2>
+    <p id="outputFullName"></p>
+    <p id="outputEmail"></p>
+    <p id="outputPhoneNumber"></p>
+    <h3>Education</h3>
+    <p id="outputEducation"></p>
+    <h3>Work Experience</h3>
+    <p id="outputExperience"></p>
+    <h3>Skills</h3>
+    <p id="outputSkills"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
